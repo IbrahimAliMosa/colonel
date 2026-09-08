@@ -1,0 +1,119 @@
+Using addEventListener brings several benefits
+
+Readability and maintainability: Decoupling JavaScript from HTML enhances code comprehension and maintenance.
+
+Scalability: As your codebase expands, managing event listeners becomes more straightforward. addEventListener enables easy addition or modification of listeners without HTML changes.
+
+Code reusability: Assigning named functions (for example: handleButtonClick) as event handlers fosters reusable code applicable across various elements or events.
+
+Consistency and best practices: Leveraging addEventListener aligns with modern JavaScript practices, promoting clean code separation and adhering to unobtrusive JavaScript principles.
+
+Multiple event handlers: A single element can host multiple event handlers for the same event, providing flexibility in managing diverse functionalities triggered by one event.
+
+
+ Mouse events
+Click event
+// <button id="clickButton">Click Me!</button>
+<script>
+  document.getElementById('clickButton').addEventListener('click', function() {
+    alert('Button clicked!');
+  });
+</script>
+
+Mouseover
+// <div id="moveArea" style="width: 200px; height: 200px; background-color: lightcoral;"></div>
+<script>
+  const moveArea = document.getElementById('moveArea');
+  moveArea.addEventListener('mousemove', function(event) {
+    console.log(`Mouse coordinates - X: ${event.clientX}, Y: ${event.clientY}`);
+  });
+</script>
+>
+
+Keyboard events
+Keyup and Keydown
+// input type="text" id="keyInput">
+<script>
+  const keyInput = document.getElementById('keyInput');
+  keyInput.addEventListener('keydown', function() {
+    console.log('Key pressed down!');
+  });
+  keyInput.addEventListener('keyup', function() {
+    console.log('Key released!');
+  });
+</script>
+>
+>
+
+Keypress
+// input type="text" id="pressInput">
+<script>
+  const pressInput = document.getElementById('pressInput');
+  pressInput.addEventListener('keypress', function() {
+    console.log('Key pressed!');
+  });
+</script>
+
+Submit events
+ Submit event
+ // form id="myForm">
+  <input type="text" id="textInput">
+  <input type="submit" value="Submit">
+</form>
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+    console.log('Form submitted!');
+  });
+</script>
+
+ Change event
+// <select id="mySelect">
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+</select>
+<script>
+  const mySelect = document.getElementById('mySelect');
+  mySelect.addEventListener('change', function() {
+    console.log('Selected option changed!');
+  });
+</script>
+>
+
+Focus event
+// <input type="text" id="textInput" placeholder="Click here">
+<script>
+  const textInput = document.getElementById('textInput');
+  textInput.addEventListener('focus', function() {
+    console.log('Input focused');
+  });
+  textInput.addEventListener('blur', function() {
+    console.log('Input blurred');
+  });
+</script>
+
+Load event
+// <script>
+  <script>
+  window.addEventListener('load', function() {
+    console.log('Page and all resources loaded');
+  });
+</script>
+
+ Resize event
+ // <script>
+  window.addEventListener('resize', function() {
+    console.log('Window resized');
+  });
+</script>
+
+Scroll event
+// <div style="height: 2000px; background-color: lightblue;">
+  Scroll down
+</div>
+<script>
+  window.addEventListener('scroll', function() {
+    console.log('Document scrolled');
+  });
+</script>
+

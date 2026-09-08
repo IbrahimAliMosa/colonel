@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(210, 210, 210);
+    text-align: center;
+}
+
+#btn {
+    background-color: rgb(153, 151, 151);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.buttons {
+    width: 125px;
+    height: 125px;
+    margin: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+#b1 {
+    background-color: rgb(255, 0, 0);
+    opacity: .3;
+}
+
+#b2 {
+    background-color: rgb(0, 128, 0);
+    opacity: .3;
+}
+
+#b3 {
+    background-color: rgb(255, 255, 0);
+    opacity: .3;
+}
+
+#b4 {
+    background-color: rgb(0, 0, 255);
+    opacity: .3;
+}
+
+#bgc {
+    width: 50%;
+    background-color: black;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 1px soli black;
+}
